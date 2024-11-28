@@ -11,6 +11,10 @@ public class Account {
     }
 
     public Account(String holder, double amount) {
+        if (holder == null || holder.isBlank()) {
+            throw new IllegalArgumentException("Holder name is required and can't be empty");
+        }
+
         this.holder = holder;
 
         if (amount < 0) {
@@ -20,40 +24,56 @@ public class Account {
         }
     }
 
+    // Getter methods
+    public String getHolder() {
+        return holder;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    // Setter methods
+    public void setHolder(String holder) {
+        if (holder == null || holder.isBlank()) {
+            throw new IllegalArgumentException("Holder name is required and can't be empty");
+        }
+
+        this.holder = holder;
+    }
+
+    public void setAmount(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Amount can't be negative");
+        }
+
+        this.amount = amount;
+    }
+
     // Methods
+
+    /**
+     * Deposits the specified amount into the account.
+     * 
+     * @param amount the amount to deposit
+     */
     public void deposit(double amount) {
         if (amount > 0) {
             this.amount += amount;
         }
     }
 
+    /**
+     * Withdraws the specified amount from the account.
+     * If the amount to withdraw is greater than the current balance, sets the
+     * balance to 0.
+     * 
+     * @param amount the amount to withdraw
+     */
     public void withdraw(double amount) {
-        double subtract = this.amount - amount;
-
-        if (subtract < 0) {
-            this.amount = 0;
-            return;
+        if (amount > 0) {
+            this.amount = Math.max(this.amount - amount, 0);
         }
-
-        this.amount = subtract;
-    }
-
-    // Getter and Setter for `holder`
-    public String getHolder() {
-        return holder;
-    }
-
-    public void setHolder(String holder) {
-        this.holder = holder;
-    }
-
-    // Getter and Setter for `amount`
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
     }
 
     // toString
