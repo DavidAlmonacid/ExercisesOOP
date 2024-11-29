@@ -1,7 +1,7 @@
 import exercises.Account;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Exercise 1
         System.out.println("\nExercise 1:");
 
