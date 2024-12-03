@@ -1,18 +1,16 @@
 /**
  * Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular
  * y cantidad (puede tener decimales).
- * 
+ * <p>
  * El titular será obligatorio y la cantidad es opcional. Crea dos constructores
  * que cumpla lo anterior.
- * 
+ * <p>
  * Crea sus métodos get, set y toString.
- * 
+ * <p>
  * Tendrá dos métodos especiales:
- * 
- * ingresar(double cantidad): se ingresa una cantidad a la cuenta, si la
+ * - ingresar(double cantidad): se ingresa una cantidad a la cuenta, si la
  * cantidad introducida es negativa, no se hará nada.
- * 
- * retirar(double cantidad): se retira una cantidad a la cuenta, si restando la
+ * - retirar(double cantidad): se retira una cantidad a la cuenta, si restando la
  * cantidad actual a la que nos pasan es negativa, la cantidad de la cuenta pasa
  * a ser 0.
  */
@@ -48,10 +46,6 @@ public class Account {
         return holder;
     }
 
-    public double getAmount() {
-        return amount;
-    }
-
     // Setter methods
     public void setHolder(String holder) {
         if (holder == null || holder.isBlank()) {
@@ -59,6 +53,10 @@ public class Account {
         }
 
         this.holder = holder;
+    }
+
+    public double getAmount() {
+        return amount;
     }
 
     public void setAmount(double amount) {
@@ -73,7 +71,7 @@ public class Account {
 
     /**
      * Deposits the specified amount into the account.
-     * 
+     *
      * @param amount the amount to deposit
      */
     public void deposit(double amount) {
@@ -86,7 +84,7 @@ public class Account {
      * Withdraws the specified amount from the account.
      * If the amount to withdraw is greater than the current balance, sets the
      * balance to 0.
-     * 
+     *
      * @param amount the amount to withdraw
      */
     public void withdraw(double amount) {

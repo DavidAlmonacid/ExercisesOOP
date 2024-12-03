@@ -2,7 +2,6 @@ package exercises.exercise1;
 
 public class AccountMain {
     public static void main(String[] args) {
-        // Exercise 1
         System.out.println("\nExercise 1:");
 
         Account account1 = new Account("John", 1000);
