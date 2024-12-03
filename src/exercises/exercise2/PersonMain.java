@@ -20,8 +20,7 @@ public class PersonMain {
         System.out.print("Age: ");
         byte age = Byte.parseByte(scanner.nextLine());
         System.out.print("Gender (M/F): ");
-        PersonGender gender = scanner.nextLine().toUpperCase().startsWith("F") ? PersonGender.FEMALE
-                : PersonGender.MALE;
+        PersonGender gender = scanner.nextLine().toUpperCase().startsWith("F") ? PersonGender.FEMALE : PersonGender.MALE;
         Person person2 = new Person(name, age, gender);
         person2.setWeight(80.5f);
         person2.setHeight(1.85f);
@@ -52,8 +51,7 @@ public class PersonMain {
         byte age = Byte.parseByte(scanner.nextLine());
 
         System.out.print("Gender (M/F): ");
-        PersonGender gender = scanner.nextLine().toUpperCase().startsWith("F") ? PersonGender.FEMALE
-                : PersonGender.MALE;
+        PersonGender gender = scanner.nextLine().toUpperCase().startsWith("F") ? PersonGender.FEMALE : PersonGender.MALE;
 
         System.out.print("Weight (kg): ");
         float weight = Float.parseFloat(scanner.nextLine());
@@ -61,8 +59,7 @@ public class PersonMain {
         System.out.print("Height (m): ");
         float height = Float.parseFloat(scanner.nextLine());
 
-        return new Person(String.format("%08d", (int) (Math.random() * 100000000)),
-                name, age, gender, weight, height);
+        return new Person(String.format("%08d", (int) (Math.random() * 100000000)), name, age, gender, weight, height);
     }
 
     private static void showPersonInfo(Person person, int number) {
