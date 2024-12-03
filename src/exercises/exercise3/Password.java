@@ -1,9 +1,9 @@
 /**
  * Haz una clase llamada Password que siga las siguientes condiciones:
  * <p>
- * Que tenga los atributos longitud y contraseña. Por defecto, la longitud sera de 12.
+ * Que tenga los atributos longitud y contraseña. Por defecto, la longitud será de 12.
  * <p>
- * Los constructores serán los siguiente:
+ * Los constructores serán los siguientes:
  * Un constructor por defecto.
  * Un constructor con la longitud que nosotros le pasemos. Generará una contraseña aleatoria con esa longitud.
  * <p>
@@ -83,14 +83,14 @@ public class Password {
         return length;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     // Setters
     public void setLength(int length) {
         this.length = length;
         this.password = generatePassword();
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
