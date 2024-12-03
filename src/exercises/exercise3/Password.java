@@ -1,12 +1,12 @@
 /**
  * Haz una clase llamada Password que siga las siguientes condiciones:
- *
+ * <p>
  * Que tenga los atributos longitud y contraseña. Por defecto, la longitud sera de 12.
- *
+ * <p>
  * Los constructores serán los siguiente:
  * Un constructor por defecto.
  * Un constructor con la longitud que nosotros le pasemos. Generará una contraseña aleatoria con esa longitud.
- *
+ * <p>
  * Los métodos que implementa serán:
  * generarPassword(): Genera la contraseña del objeto con la longitud que tenga.
  * Método get para contraseña y longitud.
@@ -53,9 +53,7 @@ public class Password {
                 randomIndex = (int) (Math.random() * CHARS.length());
                 currentChar = Character.toString(CHARS.charAt(randomIndex));
 
-                sortedPasswordChars[i] = (i % 2 == 0)
-                        ? currentChar.toLowerCase()
-                        : currentChar;
+                sortedPasswordChars[i] = (i % 2 == 0) ? currentChar.toLowerCase() : currentChar;
             }
         }
 
@@ -93,5 +91,9 @@ public class Password {
     public void setLength(int length) {
         this.length = length;
         this.password = generatePassword();
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
