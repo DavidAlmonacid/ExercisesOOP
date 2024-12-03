@@ -21,6 +21,8 @@ package exercises.exercise5;
 
 public class HomeApplianceMain {
     public static void main(String[] args) {
+        System.out.println("\nExercise 5:\n");
+
         HomeAppliance[] homeAppliances = new HomeAppliance[6];
         homeAppliances[0] = new Television(50, true, 100, Color.BLACK, EnergyConsumption.A, 10);
         homeAppliances[1] = new WashingMachine(10, 200, Color.RED, EnergyConsumption.B, 20);
