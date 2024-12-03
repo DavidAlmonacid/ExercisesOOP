@@ -4,9 +4,9 @@
  * Asigna a cada posición un objeto de las clases anteriores con los valores que
  * desees.
  * <p>
- * Ahora, recorre este array y ejecuta el método precioFinal().
+ * Ahora, recorre este array y ejecuta la función precioFinal().
  * Deberás mostrar el precio de cada clase, es decir, el precio de todas las
- * televisiones por un lado, el de las lavadoras por otro y la suma de los
+ * televisiones, por un lado, el de las lavadoras por otro y la suma de los
  * Electrodomésticos (puedes crear objetos Electrodoméstico, pero recuerda que
  * Television y Lavadora también son electrodomésticos). Recuerda el uso
  * operador instanceof.

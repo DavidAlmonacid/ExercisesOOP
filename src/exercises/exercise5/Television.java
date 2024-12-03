@@ -11,7 +11,7 @@
  * heredados. Recuerda que debes llamar al constructor de la clase padre.
  * <p>
  * Los métodos que se implementara serán:
- * - Método get de resolución y sintonizador TDT.
+ * - getter de resolución y sintonizador TDT.
  * - precioFinal(): Si tiene una resolución mayor de 40 pulgadas se incrementará
  * el precio un 30%, si tiene un sintonizador TDT incorporado aumentará 50.
  * Recuerda que las condiciones que hemos visto en la clase Electrodoméstico

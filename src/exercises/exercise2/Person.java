@@ -29,9 +29,8 @@
  * esMayorDeEdad(): indica si es mayor de edad, devuelve un booleano.
  * <p>
  * generaDNI(): genera un número aleatorio de 8 cifras, genera a partir de este
- * su número su letra correspondiente. Este método sera invocado cuando se
- * construya el objeto. Puedes dividir el método para que te sea más fácil. No
- * será visible al exterior.
+ * su número su letra correspondiente. Este será invocado cuando se construya el
+ * objeto. Puedes dividirlo para que te sea más fácil. No será visible al exterior.
  * <p>
  * Métodos set de cada parámetro, excepto de DNI.
  * <p>

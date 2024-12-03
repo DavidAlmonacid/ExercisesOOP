@@ -9,8 +9,8 @@
  * <p>
  * Los métodos que implementa serán:
  * generarPassword(): Genera la contraseña del objeto con la longitud que tenga.
- * Método get para contraseña y longitud.
- * Método set para longitud.
+ * getter para contraseña y longitud.
+ * setter para longitud.
  */
 
 package exercises.exercise3;

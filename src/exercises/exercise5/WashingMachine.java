@@ -10,11 +10,11 @@
  * debes llamar al constructor de la clase padre.
  * <p>
  * Los métodos que se implementara serán:
- * - Método get de carga.
- * - precioFinal():, si tiene una carga mayor de 30 kg, aumentara el precio 50 €,
- * de lo contrario, no se incrementara el precio. Llama al método padre y añade el
- * código necesario. Recuerda que las condiciones que hemos visto en la clase
- * Electrodoméstico también deben afectar al precio.
+ * - getter de carga.
+ * - precioFinal():, si tiene una carga mayor de 30 kg, aumentará el precio 50 €,
+ * de lo contrario, no se incrementará el precio. Llama a la función del padre y
+ * añade el código necesario. Recuerda que las condiciones que hemos visto en la
+ * clase Electrodoméstico también deben afectar al precio.
  */
 
 package exercises.exercise5;
