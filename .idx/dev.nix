@@ -21,6 +21,7 @@
     extensions = [
       # "vscodevim.vim"
       "vscjava.vscode-java-pack"
+      "usernamehw.errorlens"
     ];
 
     # Enable previews
