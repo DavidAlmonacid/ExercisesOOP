@@ -19,6 +19,7 @@ package exercises.exercise7;
 
 public class VideoGame implements Rentable {
     private final boolean DEFAULT_RENTED = false;
+    @SuppressWarnings("unused")
     private final String rentedUserId;
 
     private String title;

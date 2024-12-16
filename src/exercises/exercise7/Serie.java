@@ -20,6 +20,7 @@ package exercises.exercise7;
 public class Serie implements Rentable {
     private final int DEFAULT_SEASONS = 3;
     private final boolean DEFAULT_RENTED = false;
+    @SuppressWarnings("unused")
     private final String rentedUserId;
 
     private String title;
