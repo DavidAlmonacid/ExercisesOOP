@@ -1,45 +1,8 @@
 {
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    "breadcrumbs.enabled": false,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "boundary",
-    "editor.guides.bracketPairs": "active",
-    "editor.linkedEditing": true,
-    "editor.detectIndentation": false,
-    "editor.fontFamily": "'Cascadia Code', Consolas, monospace",
     "editor.fontSize": 13.7,
-    "editor.fontWeight": "370",
-    "editor.fontLigatures": "'calt', 'ss01', 'ss19'",
-    "editor.cursorBlinking": "smooth",
-    "editor.cursorWidth": 3,
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
-    "editor.formatOnPaste": true,
-    "editor.wordWrap": "bounded",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.organizeImports": "explicit"
-    },
-    "editor.tabSize": 4,
-    "editor.wordWrapColumn": 100,
-    "editor.rulers": [100],
-    "editor.defaultFormatter": "redhat.java",
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "out/production/ExercisesOOP",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ],
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.sources.organizeImports.starThreshold": 5,
-    "java.sources.organizeImports.staticStarThreshold": 3,
-    "java.completion.importOrder": [
-        "",
-        "javax",
-        "java",
-        "#"
-    ],
-    "java.dependency.packagePresentation": "hierarchical",
-    "java.project.explorer.showNonJavaResources": false,
+    ]
 }
