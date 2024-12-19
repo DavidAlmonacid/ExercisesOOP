@@ -1,8 +1,7 @@
 {
-    "editor.fontSize": 13.7,
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "out/production/ExercisesOOP",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "out/production/ExercisesOOP",
+  "java.project.referencedLibraries": [
+      "lib/**/*.jar"
+  ]
 }
