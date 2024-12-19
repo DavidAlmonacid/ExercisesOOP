@@ -13,6 +13,8 @@ import java.util.Set;
 
 public class MovieTheaterMain {
     public static void main(String[] args) {
+        System.out.println("\nExercise 11:\n");
+
         List<Movie> movies = List.of(
                 new Movie("The Shawshank Redemption", 142, "Frank Darabont", "R"),
                 new Movie("The Godfather", 175, "Francis Ford Coppola", "R"),
@@ -20,7 +22,8 @@ public class MovieTheaterMain {
                 new Movie("12 Angry Men", 96, "Sidney Lumet", "PG"),
                 new Movie("Schindler's List", 195, "Steven Spielberg", "PG-13"));
 
-        MovieTheater movieTheater = new MovieTheater(movies.get(4).getTitle(), 12_800);
+        Movie movie = movies.get(4);
+        MovieTheater movieTheater = new MovieTheater(movie.getTitle(), 12_800);
 
         Set<String> busySeats = new HashSet<>();
         int seatRows = movieTheater.getROWS();
@@ -33,11 +36,17 @@ public class MovieTheaterMain {
                 continue;
             }
 
-            movieTheater.setSeatUnavailable(randomSeat, false);
-            busySeats.add(randomSeat);
+            Viewer viewer = generateRandomViewer();
+            int viewerAge = viewer.getAge();
+
+            if (viewerCanWatchMovie(viewerAge, movie.getClassification())) {
+                movieTheater.setSeatUnavailable(randomSeat, false, viewer);
+                busySeats.add(randomSeat);
+                System.out.println("Viewer with age " + viewerAge + " seated at " + randomSeat);
+            }
         }
 
-        System.out.println("Busy Seats: " + busySeats + '\n');
+        System.out.println("\nBusy Seats: " + busySeats + '\n');
         System.out.println(movieTheater);
     }
 
@@ -49,7 +58,21 @@ public class MovieTheaterMain {
         return String.format("%c%d", randomLetter, randomNum);
     }
 
+    private static Viewer generateRandomViewer() {
+        int age = getRandomRange(5, 80);
+        return new Viewer(age);
+    }
+
     private static int getRandomRange(int min, int max) {
         return (int) Math.floor(((max + 1 - min) * Math.random()) + min);
+    }
+
+    private static boolean viewerCanWatchMovie(int viewerAge, String movieClassification) {
+        return switch (movieClassification) {
+            case "R" -> viewerAge >= 17;
+            case "PG-13" -> viewerAge >= 13;
+            case "PG" -> viewerAge >= 8;
+            default -> true;
+        };
     }
 }

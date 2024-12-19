@@ -78,11 +78,12 @@ public class MovieTheater {
         return seats;
     }
 
-    public void setSeatUnavailable(String seatId, boolean isAvailable) {
+    public void setSeatUnavailable(String seatId, boolean isAvailable, Viewer viewer) {
         for (List<Seat> row : seats) {
             for (Seat seat : row) {
                 if (seat.getId().equals(seatId)) {
                     seat.setAvailable(isAvailable);
+                    seat.setViewer(viewer);
                     return;
                 }
             }
@@ -117,6 +118,7 @@ public class MovieTheater {
 class Seat {
     private String id;
     private boolean isAvailable;
+    private Viewer viewer;
 
     public Seat(String id) {
         this.id = id;
@@ -133,5 +135,13 @@ class Seat {
 
     public void setAvailable(boolean isAvailable) {
         this.isAvailable = isAvailable;
+    }
+
+    public Viewer getViewer() {
+        return viewer;
+    }
+
+    public void setViewer(Viewer viewer) {
+        this.viewer = viewer;
     }
 }
