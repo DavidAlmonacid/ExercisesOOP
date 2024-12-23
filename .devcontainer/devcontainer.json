@@ -19,30 +19,24 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"gitHub.copilot",
 				"redhat.java",
 				"vscjava.vscode-java-debug",
 				"vscjava.vscode-java-test",
 				"vscjava.vscode-java-dependency",
 				"-vscjava.vscode-java-pack",
-				"-dbaeumer.vscode-eslint",
-				"-Postman.postman-for-vscode"
+				"-dbaeumer.vscode-eslint"
 			],
 			"settings": {
+				"java.project.sourcePaths": ["src"],
+				"java.project.outputPath": "out/production/ExercisesOOP",
+				"java.project.referencedLibraries": ["lib/**/*.jar"],
 				"[java]": {
 					"editor.tabSize": 4,
 					"editor.wordWrapColumn": 100,
-					"editor.rulers": [
-						100
-					],
+					"editor.rulers": [100],
 					"editor.defaultFormatter": "redhat.java"
 				},
-				"java.project.sourcePaths": [
-					"src"
-				],
-				"java.project.outputPath": "out/production/ExercisesOOP",
-				"java.project.referencedLibraries": [
-					"lib/**/*.jar"
-				],
 				"java.compile.nullAnalysis.mode": "automatic",
 				"java.sources.organizeImports.starThreshold": 5,
 				"java.sources.organizeImports.staticStarThreshold": 3,
